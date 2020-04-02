@@ -8,7 +8,7 @@ const auth = require('../middleware/auth');
 
 
 // @route   get api/test
-// @desc    get all tests
+// @desc    get test of specific user
 // @access  private
 router.get('/', auth, async (req , res ) =>{
     
@@ -52,21 +52,4 @@ router.post('/',auth, [
     });
 
 
-// // @route   put api/contacts/:id
-// // @desc    update contact
-// // @access  private
-// router.put('/:id',auth , (req , res ) =>{
-
-//     res.send('updated contact');
-
-// });
-
-// // @route   delete api/contacts/:id
-// // @desc    delete contact
-// // @access  private
-// router.delete('/:id',auth, (req , res ) =>{
-
-//     res.send('delete contact ');
-  
-// });
 module.exports=router ;
