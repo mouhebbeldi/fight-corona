@@ -22,8 +22,7 @@ app.use('/api/contacts',require('./routes/contacts'));
 app.use('/api/auth',require('./routes/auth'));
 
 
-//serve to prodution 
-if(process.env.NODE_ENV == 'production'){
+
 //static folder 
 
 

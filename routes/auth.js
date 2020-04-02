@@ -29,17 +29,18 @@ try {
 // @desc auth user and get token
 // @access public
 router.post('/',[
-    check('email', 'plz include a valid email').isEmail(),
-    check('password','password is required').exists()
+
+    check('password','password is required too').not().isEmpty(),
+    check('cin','cin is required too').not().isEmpty()
 
 ] ,async (req , res ) =>{
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        const { email , password  }= req.body;
+        const { cin , password  }= req.body;
         try {
-            let user = await User.findOne({email});
+            let user = await User.findOne({cin});
             if(!user ){
                 return res.status(400).json({msg : 'user not exists'});
             }

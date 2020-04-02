@@ -1,7 +1,7 @@
 const express =require('express');
 const router = express.Router();
 const User = require('../models/User');
-const bcrypt =require('bcryptjs');
+// const bcrypt =require('bcryptjs');
 const jwt = require ('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
 const config = require ('config');
@@ -13,8 +13,9 @@ const jwtSecret = config.get('jwtSECRET');
 router.post('/',[
     
     check('name','name is required').not().isEmpty(),
-    check('email','email is unique and required ').isEmail(),
-    check('password','password is required too').not().isEmpty()
+    check('localisation','localisation is unique and required ').not().isEmpty(),
+    check('password','password is required too').not().isEmpty(),
+    check('cin','cin is required too').not().isEmpty()
 
   ] ,async (req , res ) =>{
     const errors = validationResult(req);
@@ -23,22 +24,20 @@ router.post('/',[
   }
 
 
-const {name , email , password  }= req.body;
+const {name , localisation , password ,cin }= req.body;
 try {
 
-    let user = await User.findOne({email});
+    let user = await User.findOne({cin});
     if(user ){
         return res.status(400).json({msg : 'user already exists'});
     }
 
     user = new User ({
         name,
-        email,
-        password
+        localisation,
+        password,
+        cin
     });
-
-    // const salt = await bcrypt.getSalt(10);/*idk why this is not working */
-    // user.password= await bcrypt.hash(password, salt);/*idk why this is not working */
 
     await user.save();
 
