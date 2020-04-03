@@ -1,7 +1,7 @@
 {
-  "name": "contact-tracker",
+  "name": "freecorona",
   "version": "1.0.0",
-  "description": "freecorona app",
+  "description": "corona-fight app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
