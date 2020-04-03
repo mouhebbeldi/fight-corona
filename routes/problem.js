@@ -19,7 +19,7 @@ try {
 });
 
 
-// // @route   post api/test
+// // @route   post api/problems
 // // @desc    posting a problem
 // // @access  public
 router.post('/' ,async (req , res ) =>{
