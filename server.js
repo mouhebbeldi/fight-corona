@@ -17,13 +17,11 @@ connectDB();
 
 
 
+app.use('/api/problems',require('./routes/problem'));
 app.use('/api/users',require('./routes/users'));
 app.use('/api/test',require('./routes/test'));
 app.use('/api/auth',require('./routes/auth'));
 
-
-
-//static folder 
 
 
 
