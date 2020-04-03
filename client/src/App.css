@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+ 
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+.form_css{
+
+    
+    width: 30%;
+    float: right;
+}

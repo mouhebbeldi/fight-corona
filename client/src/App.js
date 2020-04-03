@@ -1,18 +1,24 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import './App.css';
-// eslint-disable-next-line
-import Cnt from './components/Cnt'
+import {BrowserRouter as Router , Route , Switch } from 'react-router-dom';
 
-import axios from 'axios';
+import Acceuil from './components/Acceuil';
+import Problems from './components/Problems';
 
 function App() {
 
   
   return (
-    <div className="App">
-      Hello React
+   <Router>
+  
+      <Fragment className='container'>
+        <Switch>
+          <Route exact path='/' component={Acceuil}/>
+          <Route exact path='/problems' component={Problems}/>
+        </Switch>
+      </Fragment>
       
-    </div>
+   </Router>
   );
 }
 
