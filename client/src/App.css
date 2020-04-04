@@ -8,5 +8,15 @@
     width: 90%;
     left: 5%;
 }
-
-
+/* NavBar */
+.item{
+    color: crimson !important;
+}
+.welcome{
+color: chartreuse !important;
+font-size: larger;
+}
+.userName{
+color: coral !important;
+}
+/* NavBar */

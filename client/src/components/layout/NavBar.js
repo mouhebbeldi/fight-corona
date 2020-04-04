@@ -1,12 +1,52 @@
-import React from 'react';
+import React, { Fragment,useContext } from 'react';
 import '../../App.css';
 import {Link} from 'react-router-dom';
-
-import Login from '../auth/Login'
+import AuthContext from '../../context/auth/authContext';
+import Login from '../auth/Login';
+import avatar from './avatar.jpg';
 const  NavBar =(props)=> {
-    return (
+  const authContext = useContext(AuthContext);
+  const {isAuthenticated , logout, user}= authContext;
   
-        <div className="form_register ui attached stackable secondary menu">
+  //logout here
+  const onLogout= ()=> logout();
+  
+  
+  const authLinks=(
+    <Fragment>
+      
+<div className="form_register ui attached stackable secondary menu">
+        <div className="ui container">
+          
+          <li className='ui item'>
+               <Link to='/'> <i className="home icon" />  Acceuil </Link>
+          </li>        
+          <li className='ui item'>
+          <Link to='/problems'><i className="grid layout icon" /> Problems</Link>
+          </li>
+          <li className='item'><img className=' item ui avatar image' src={avatar} alt="avatar user"/> <span className='content item userName'>{user &&  user.name[0].toUpperCase() +user.name.slice(1) }</span> </li>
+        
+         <div className="right item">
+         <div className="ui simple dropdown item">
+           ShowList
+           <i className="dropdown icon" />
+           <div className="menu">
+             <a className="item"><i className="edit icon" /> About US</a>
+             <a className="item"><i className="settings icon" /> Account Setting</a>
+             <a className="item"><i className="globe icon" /> Choose Language</a>
+             <a className="item" onClick={onLogout}><i className="power off icon" /> Logouts</a>
+           </div>
+         </div>
+         </div>
+       </div>
+       </div> 
+    </Fragment>
+);
+
+const nonAuthLinks=(
+  <Fragment>
+
+<div className="form_register ui attached stackable secondary menu">
         <div className="ui container">
           
            <li className='ui item'>
@@ -24,7 +64,6 @@ const  NavBar =(props)=> {
             <div className="menu">
               <a className="item"><i className="edit icon" /> About US</a>
               <a className="item"><i className="globe icon" /> Choose Language</a>
-              <a className="item"><i className="settings icon" /> Account Settings</a>
             </div>
           </div>
           <div className="right item">
@@ -36,7 +75,15 @@ const  NavBar =(props)=> {
           </div>
         </div>
       </div>
-    )
+  </Fragment>
+)
+    return (
+      <Fragment>
+        {isAuthenticated ? authLinks : nonAuthLinks }
+
+      </Fragment>
+      )
+
 }
 
 export default NavBar
