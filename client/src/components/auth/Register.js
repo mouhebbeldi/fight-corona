@@ -1,12 +1,13 @@
 import React,{useState,useContext,useEffect} from 'react'
 import AlertContext from '../../context/alert/AlertContext';
 import AuthContext from '../../context/auth/authContext';
-const  Register = () =>{
+import NavBar from '../layout/NavBar';
+const  Register = props =>{
     
     const alertContext = useContext(AlertContext);
     const authContext = useContext(AuthContext);
 
-    const {register, error, clearErrors}= authContext;
+    const {register, error, clearErrors ,isAuthenticated}= authContext;
     const {setAlert} = alertContext;
     const [user, setUser] = useState({
         name:'',
@@ -14,13 +15,19 @@ const  Register = () =>{
         password:'',
         cin:''
     });
+
+
     useEffect(() => {
         if(error==='user already exists') {
             setAlert(error);
             clearErrors();
         }
+        if(isAuthenticated){
+            props.history.push('/');
+        }
+    }, [error,isAuthenticated,props.history]);
 
-    }, [error])
+
     const {name ,localisation,cin , password}= user;
     const onChange = e=> setUser({...user , [e.target.name] : e.target.value});
     const onSubmit = e=>{
@@ -41,7 +48,8 @@ const  Register = () =>{
         }
     }
     return (
-        <div>
+        <div className='container'>
+            <NavBar/>
         <h1>Register </h1>
         <form className="ui form" onSubmit={onSubmit}>
             <div className="field">

@@ -1,11 +1,19 @@
-import React from 'react';
-import Login from './auth/Login';
+import React, { useContext,useEffect } from 'react';
 import NavBar from './layout/NavBar';
 import News from './layout/News';
 
+import AuthContext from '../context/auth/authContext';
 
+const Acceuil = () => {
+  const authContext =useContext(AuthContext);
+  const {loadUser }= authContext;
+  useEffect(() => {
+    loadUser();
+    // eslint-disable-next-line
+  }, [])
 
-const Acceuil = () => (
+  return (
+
   <div>
     <NavBar/>
     <div class="ui grid stackable">
@@ -21,6 +29,6 @@ const Acceuil = () => (
 
 
 
-)
+)};
 
 export default Acceuil

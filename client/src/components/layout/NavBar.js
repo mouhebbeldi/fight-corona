@@ -16,7 +16,7 @@ const  NavBar =()=> {
            <Link to='/problems'><i className="grid layout icon" /> Problems</Link>
            </li>
            <li className='ui item'>
-           <Link to='/register'><i className="grid layout icon" /> Register</Link>
+           <Link to='/register'> <i class="corner add icon"></i> Register</Link>
            </li>
           <div className="ui simple dropdown item">
             ShowList

@@ -35,7 +35,7 @@ const onSubmit = e=>{
           </div>
         
           
-      <input className="ui button" value='Register' type="submit"/>
+      <input className="ui button" value='Login' type="submit"/>
         </div>
       </div>
 </form>

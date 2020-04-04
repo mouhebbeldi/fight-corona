@@ -7,8 +7,10 @@ import Problems from './components/Problems';
 import Register from './components/auth/Register';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
+import setAuthToken from './utils/setAuthToken';
 
-function App() {
+if (localStorage.token) setAuthToken(localStorage.token);
+const App=()=> {
 
   
   return (
