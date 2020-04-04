@@ -1,19 +1,40 @@
-import React, { Fragment ,useState} from 'react'
+import React,{Fragment,useState,useContext,useEffect} from 'react'
+import AlertContext from '../../context/alert/AlertContext';
+import AuthContext from '../../context/auth/authContext';
 
-function Login() {
+const  Login = props =>{
+
+  const alertContext = useContext(AlertContext);
+  const authContext = useContext(AuthContext);
+
+  const {login, error, clearErrors ,isAuthenticated}= authContext;
+  const {setAlert} = alertContext;
   const [user, setUser] = useState({
-
     cin:'',
     password:''
-});
+  });
+
+useEffect(() => {
+  if(error==='user not exists' || error==='invalid password' ) {
+    setAlert(error);
+    clearErrors();
+  }
+}, [error,isAuthenticated , props.history]);
+
 
 const {cin , password}= user;
 const onChange = e=> setUser({...user , [e.target.name] : e.target.value});
 const onSubmit = e=>{
     e.preventDefault();
-    console.log('Login Submit');
+    if(cin.length<8 || password==='') 
+      setAlert('please fill all fields');
+    else 
+    login({
+      cin,
+      password
+    })
 }
-    return (
+return (
         <form onSubmit={onSubmit}>
         <div className="ui form" >
         <div className="inline fields item two fields scalable">
@@ -33,13 +54,10 @@ const onSubmit = e=>{
               onChange={onChange}
             />
           </div>
-        
-          
       <input className="ui button" value='Login' type="submit"/>
         </div>
       </div>
-</form>
-    )
-}
+</form>     
+)};
 
 export default Login;

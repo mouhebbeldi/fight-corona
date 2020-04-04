@@ -48,8 +48,8 @@ const  Register = props =>{
         }
     }
     return (
-        <div className='container'>
-            <NavBar/>
+        <div className=''>
+            {/* <NavBar/> */}
         <h1>Register </h1>
         <form className="ui form" onSubmit={onSubmit}>
             <div className="field">

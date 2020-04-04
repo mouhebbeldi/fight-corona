@@ -3,7 +3,7 @@ import '../../App.css';
 import {Link} from 'react-router-dom';
 
 import Login from '../auth/Login'
-const  NavBar =()=> {
+const  NavBar =(props)=> {
     return (
   
         <div className="form_register ui attached stackable secondary menu">
@@ -30,7 +30,7 @@ const  NavBar =()=> {
           <div className="right item">
 
           {/* login down here */}
-          <Login/>
+          <Login props={props}/>
           {/* login up here */}
 
           </div>

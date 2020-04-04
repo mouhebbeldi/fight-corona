@@ -15,9 +15,9 @@ const Acceuil = () => {
   return (
 
   <div>
-    <NavBar/>
+    {/* <NavBar/> */}
     <div class="ui grid stackable">
-        <div class="ten wide column"><News/></div>
+        <div class="ten wide column"><News /></div>
         <div class="six wide column"></div>
     </div>
   
