@@ -22,9 +22,22 @@ const  NavBar =(props)=> {
                <Link to='/'> <i className="home icon" />  Acceuil </Link>
           </li>        
           <li className='ui item'>
-          <Link to='/problems'><i className="grid layout icon" /> Problems</Link>
+               <Link to='/problems'><i className="grid layout icon" /> Problems</Link>
           </li>
-          <li className='item'><img className=' item ui avatar image' src={avatar} alt="avatar user"/> <span className='content item userName'>{user &&  user.name[0].toUpperCase() +user.name.slice(1) }</span> </li>
+          <li className='ui item'>
+               <Link to='/qcm'><i className="heartbeat icon" /> QCM Covid19</Link>
+          </li>
+
+
+          <div className="ui large horizontal divided list">
+        <div className="item">
+          <img className="ui avatar image" src={avatar} />
+          <div className="content">
+            <span className="header">  {user &&  user.name[0].toUpperCase() +user.name.slice(1) }</span>
+          </div>
+        </div>
+      </div>
+
         
          <div className="right item">
          <div className="ui simple dropdown item">
