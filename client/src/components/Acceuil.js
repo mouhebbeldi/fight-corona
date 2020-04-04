@@ -1,7 +1,9 @@
 import React from 'react';
-import Login from './layout/Login';
+import Login from './auth/Login';
 import NavBar from './layout/NavBar';
 import News from './layout/News';
+
+
 
 const Acceuil = () => (
   <div>
