@@ -6,9 +6,11 @@ import Acceuil from './components/Acceuil';
 import Problems from './components/Problems';
 import Register from './components/auth/Register';
 import AuthState from './context/auth/AuthState';
+import ProblemState from './context/problems/ProblemState';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './utils/setAuthToken';
 import NavBar from './components/layout/NavBar';
+import Qcm from './components/auth/Qcm';
 if (localStorage.token) setAuthToken(localStorage.token);
 const App=()=> {
 
@@ -16,6 +18,7 @@ const App=()=> {
   return (
     <AuthState>
       <AlertState>
+        <ProblemState>
         <Router>
             <Fragment className='container'>
               <NavBar/> 
@@ -24,9 +27,11 @@ const App=()=> {
                 <Route exact path='/' component={Acceuil}/>
                 <Route exact path='/problems' component={Problems}/>
                 <Route exact path='/register' component={Register}/>
+                <Route exact path='/qcm' component={Qcm}/>
               </Switch>
             </Fragment>
         </Router>
+        </ProblemState>
       </AlertState>
    </AuthState>
   );

@@ -23,7 +23,10 @@ useEffect(() => {
 
 
 const {cin , password}= user;
+
 const onChange = e=> setUser({...user , [e.target.name] : e.target.value});
+
+
 const onSubmit = e=>{
     e.preventDefault();
     if(cin.length<8 || password==='') 
@@ -54,7 +57,7 @@ return (
               onChange={onChange}
             />
           </div>
-      <input className="ui button" value='Login' type="submit"/>
+      <input className="ui green button" value='Login' type="submit"/>
         </div>
       </div>
 </form>     

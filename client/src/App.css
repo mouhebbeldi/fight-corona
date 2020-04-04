@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
 *{
     box-sizing: border-box;
  
+}
+.item{
+    font-family: 'Changa', sans-serif;
 }
 
 .container{
@@ -20,3 +24,6 @@ font-size: larger;
 color: coral !important;
 }
 /* NavBar */
+
+
+
