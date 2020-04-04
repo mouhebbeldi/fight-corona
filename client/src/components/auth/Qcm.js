@@ -1,5 +1,5 @@
 import React from 'react'
-
+import 'Qcm.css';
 const Qcm = () =>{
 
     const questions = document.getElementsByTagName ( "div" );   //nselectioni les div(les questions kol) kol fi tab
