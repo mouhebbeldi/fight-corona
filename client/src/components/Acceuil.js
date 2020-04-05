@@ -1,7 +1,10 @@
 import React, { useContext,useEffect } from 'react';
-import { Header } from 'semantic-ui-react';
+import { Feed,Header } from 'semantic-ui-react';
+import avatar2 from './layout/avatar2.jpg';
 import News from './layout/News';
 import AuthContext from '../context/auth/authContext';
+import ProblemContext from '../context/problems/problemContext';
+
 import courbe from './layout/courbe.jpg';
 import AOS from 'aos';
 const Acceuil = () => {
@@ -10,20 +13,28 @@ const Acceuil = () => {
 
   
   const authContext =useContext(AuthContext);
-  const {loadUser }= authContext;
+  const problemContext =useContext(ProblemContext);
+  const {getProblems, problem} = problemContext;
+
+
+
+  const {loadUser , user , isAuthenticated}= authContext;
+
   useEffect(() => {
-    loadUser();
+    if (isAuthenticated)
+      loadUser();
+
+    getProblems();
     // eslint-disable-next-line
-  }, [])
+  }, [ ]);
 
-  const showHide =()=>{
-    
-  }
+ console.log(problem)
+  
 
+ 
   return (
 
   <div>
-    {/* <NavBar/> */}
     <div className="ui grid stackable">
     <div className="sixteen wide column">
      <h2 className='free_corona' data-aos="flip-down" data-aos-duration="1200">Free-Corona</h2>
@@ -72,13 +83,47 @@ const Acceuil = () => {
         <img className='courbe' src={courbe} alt="courbe"/>
         </div>
         <div className="seven wide column">
-          <News/>
-       
+          
+
+        <div className='problems'>
+        <Header
+          as='h2'
+          content='Voir les problèmes autour de vous'
+          subheader='Un endroit pour voir toutes les violations légales en Tunisie '
+        />
+            {
+            problem!== null  ?  
+            (
+              problem.map( (p) =>(
+                <Feed data-aos="flip-down">
+                  <Feed.Event>
+                    
+                    <Feed.Label>
+                      <img src={avatar2} />
+                    </Feed.Label>
+                    <Feed.Content>
+                    <Feed.Summary>
+          <a>{p.place} </a> 
+        </Feed.Summary> 
+                      {p.message}
+                    </Feed.Content>
+                    <Feed.Date>{ p.date}</Feed.Date>
+                  </Feed.Event>
+                </Feed>
+              ))) : (
+                <div>NO Problems For Today</div>
+              )
+           
+            }
+   
+            </div>
+            <News/>
+        </div>
+
+
         </div>
     </div>
-  
 
-  </div>
 
     
     

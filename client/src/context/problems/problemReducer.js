@@ -9,19 +9,20 @@ export default (state, action )=>{
 
     switch(action.type){
         case PROBLEM_LOADED:
+            case PROBLEM_SUCCESS:
                 return {
                     ...state,
                     error:null,
                     loading:false,
                     problem:action.payload
                 };  
-        case PROBLEM_SUCCESS:
-            return {
-                ...state,
-                error:null,
-                loading:false,
-                problem:action.payload
-            };
+        
+            // return {
+            //     ...state,
+            //     error:null,
+            //     loading:false,
+            //     problem:action.payload
+            // };
         
        
         case PROBLEM_FAIL:

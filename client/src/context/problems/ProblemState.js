@@ -59,6 +59,7 @@ return (
            
             loading:state.loading,
             error:state.error,
+            problem:state.problem,
             setProblems,
             getProblems
         }}>

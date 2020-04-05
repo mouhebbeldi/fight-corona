@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
 *{
     box-sizing: border-box;
-    background-color: #d4d2ed;
+    /* background-color: whitesmoke; */
 }
 
 h2{
@@ -19,7 +19,16 @@ h2{
 .register {
     margin-top: 60px;
 }
-
+::selection {
+    background: #ffb7b7; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #ffb7b7; /* Gecko Browsers */
+  }
+  p.yellow::selection,
+p.yellow::-moz-selection {
+  background: #fff2a8;
+}
 .container{
     position: relative;
     width: 90%;
@@ -63,4 +72,13 @@ iframe{
     text-align: center;
     font-family: 'Changa', sans-serif;
     
+}
+
+.problems{
+    /* border: 1px solid black; */
+   
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color:rgb(255, 250, 242) !important;
 }
