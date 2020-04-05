@@ -20,16 +20,16 @@ const App=()=> {
       <AlertState>
         <ProblemState>
         <Router>
-            <Fragment className='container'>
+            <div className='container' >
               <NavBar/> 
               <Alerts/>
               <Switch>
                 <Route exact path='/' component={Acceuil}/>
-                <Route exact path='/problems' component={Problems}/>
-                <Route exact path='/register' component={Register}/>
-                <Route exact path='/qcm' component={Qcm}/>
+                <Route  path='/problems' component={Problems}/>
+                <Route  path='/register' component={Register}/>
+                <Route  path='/qcm' component={Qcm}/>
               </Switch>
-            </Fragment>
+            </div>
         </Router>
         </ProblemState>
       </AlertState>

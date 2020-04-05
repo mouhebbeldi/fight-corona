@@ -1,7 +1,6 @@
 import React, { useContext,useEffect } from 'react';
-import NavBar from './layout/NavBar';
+import { Header } from 'semantic-ui-react';
 import News from './layout/News';
-
 import AuthContext from '../context/auth/authContext';
 
 const Acceuil = () => {
@@ -12,13 +11,56 @@ const Acceuil = () => {
     // eslint-disable-next-line
   }, [])
 
+  const showHide =()=>{
+    
+  }
+
   return (
 
   <div>
     {/* <NavBar/> */}
-    <div class="ui grid stackable">
-        <div class="ten wide column"><News /></div>
-        <div class="six wide column"></div>
+    <div className="ui grid stackable">
+    <div className="sixteen wide column">
+     <h2 className='free_corona'>Free-Corona</h2>
+    
+   
+
+    </div>
+        <div className="nine wide column">
+        <Header size='large'>Numéros d’urgence et d’écoute :190 </Header>
+     <Header size='large'>J’habite à l’étranger, qui appeler ? </Header> 
+        <p>
+        L’Ambassade et consulat de votre lieu de résidence est à votre disposition
+         pour répondre à l’ensemble de vos questions. Par ailleurs, le ministère met à jour régulièrement
+        </p><a href="#"> son site de conseils aux voyageurs.</a>
+        <Header size='large'>Numéros utiles </Header>
+        <p>Un numéro vert répond à vos questions sur le Coronavirus COVID-19 en permanence, 24h/24 et 7j/7 : 0 800 130 000.</p>
+        
+        
+        <h2>Le coronavirus en cinq questions</h2>
+        <iframe 
+          
+          src="https://www.youtube.com/embed/cycl7tK5CdE" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen>
+
+        </iframe>
+        <h2>Faut-il avoir peur du coronavirus ?</h2>
+        <iframe 
+         
+          src="https://www.youtube.com/embed/woU8hq8O4OI" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen>
+
+        </iframe>
+    
+        </div>
+        <div className="seven wide column">
+          <News/>
+       
+        </div>
     </div>
   
 

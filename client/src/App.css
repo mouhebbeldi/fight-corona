@@ -3,8 +3,17 @@
     box-sizing: border-box;
  
 }
+
+h2{
+    font-family: 'Changa', sans-serif;
+    font-size: 30px;
+
+}
 .item{
     font-family: 'Changa', sans-serif;
+}
+.stackable .nine{
+
 }
 
 .container{
@@ -17,7 +26,6 @@
     color: crimson !important;
 }
 .welcome{
-color: chartreuse !important;
 font-size: larger;
 }
 .userName{
@@ -25,5 +33,27 @@ color: coral !important;
 }
 /* NavBar */
 
+ul li{
+    list-style: none;
+}
+.side_container{
+    margin-top: 30px !important;
+}
+iframe{
+    width:100%;
+    height: 320px;
+}
+.free_corona{
+    font-size: 70px;
+    color: wheat;
+}
+.center{
+    text-align: center !important;
 
-
+}
+.sixteen{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Changa', sans-serif;
+    
+}
