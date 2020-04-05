@@ -12,9 +12,11 @@ h2{
 .item{
     font-family: 'Changa', sans-serif;
 }
-.stackable .nine{
-
+.courbe{
+    margin-top: 30px;
+    width: 100%;
 }
+
 
 .container{
     position: relative;
@@ -45,11 +47,13 @@ iframe{
 }
 .free_corona{
     font-size: 70px;
-    color: wheat;
+    color: rgb(200, 161, 88);
 }
 .center{
     text-align: center !important;
     padding: auto;
+    font-size: 40px;
+    color: rgb(200, 161, 88);
 
 }
 .sixteen{

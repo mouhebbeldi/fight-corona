@@ -1,7 +1,9 @@
 import React,{Fragment,useState,useContext,useEffect} from 'react';
 import AlertContext from '../context/alert/AlertContext';
 import ProblemContext from '../context/problems/problemContext';
-
+import { Item } from 'semantic-ui-react';
+import cor1 from './layout/cor1.jpg';
+import cor2 from './layout/cor2.jpg';
 
 const Problems = () =>{
   const alertContext = useContext(AlertContext);
@@ -37,10 +39,28 @@ else {
   setProblem({ cin  : '',message  : '',place  : '', phone  : '' });
 }
 }
-
+const items = [
+  {
+    childKey: 0,
+    image: cor1,
+    header: 'La maladie à coronavirus 2019',
+    description: 'La maladie à coronavirus 2019 (COVID-19) est une maladie infectieuse provoquée par un nouveau virus qui n\'avait encore jamais été identifié chez l\'être humain.',
+    meta: ''
+  },
+  {
+    childKey: 1,
+    image: cor2,
+    header: 'COMMENT LA MALADIE SE PROPAGE',
+    description: 'Le nouveau coronavirus 2019 se propage essentiellement par contact avec une personne infectée, lorsqu\'elle tousse ou éternue, ou par l\'intermédiaire des gouttelettes de salive ou de sécrétions nasales.',
+    meta: ''
+ 
+  },
+]
   return (
   <div>
-      <h1>Signaler une violation légale</h1>
+      
+      <h1 className='center'>Signaler une violation légale</h1>
+      <Item.Group items={items} />
         <form className="ui form" onSubmit={onSubmit}>
             <div className="field">
                 <label>Carte d'Identité</label>

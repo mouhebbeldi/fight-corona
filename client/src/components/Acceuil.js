@@ -2,7 +2,7 @@ import React, { useContext,useEffect } from 'react';
 import { Header } from 'semantic-ui-react';
 import News from './layout/News';
 import AuthContext from '../context/auth/authContext';
-
+import courbe from './layout/courbe.jpg'
 const Acceuil = () => {
   const authContext =useContext(AuthContext);
   const {loadUser }= authContext;
@@ -55,7 +55,7 @@ const Acceuil = () => {
           allowFullScreen>
 
         </iframe>
-    
+        <img className='courbe' src={courbe} alt="courbe"/>
         </div>
         <div className="seven wide column">
           <News/>

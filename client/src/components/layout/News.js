@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import React, { Fragment } from 'react'
 import { Container, Header,Rating } from 'semantic-ui-react'
 import {  Image, Modal } from 'semantic-ui-react'
@@ -20,7 +18,7 @@ const News = () => {
         <Fragment>
     <Container fluid>
       <Header as='h2'>informations CORONAVIRUS</Header>
-      <p >
+      <p  >
       Le 27 mars 2020, le Premier ministre a annoncé le renouvellement du confinement 
       pour deux semaines supplémentaires, soit jusqu’au mercredi 15 avril.
        Les mêmes règles que celles actuellement en vigueur continueront à s’appliquer. 
@@ -32,18 +30,18 @@ const News = () => {
       <Image wrapped size='medium' src={corona1} />
       <Modal.Description>
         
-        <p>
+        <p data-aos="zoom-in-left">
         Le 27 mars 2020, le Premier ministre a annoncé le renouvellement du confinement pour deux semaines supplémentaires, soit jusqu’au mercredi 15 avril. Les mêmes règles que celles actuellement en vigueur continueront à s’appliquer. Cette période de confinement pourra être prolongée si la situation sanitaire l’exige.
 
         En application de l’état d’urgence sanitaire, les déplacements sont interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour :
     <ul>
-    <li>
+    <li data-aos="zoom-in-left">
     Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle,
      lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous
       forme de télétravail ou déplacements professionnels ne pouvant être différés.
 
     </li>
-    <li>
+    <li data-aos="zoom-in-left">
         Déplacements pour effectuer des achats de fournitures nécessaires
          à l’activité professionnelle et des achats de première nécessité, 
          y compris les acquisitions à titre gratuit (distribution de denrées alimentaires…) 
@@ -64,27 +62,39 @@ const News = () => {
     </Container>
     <Container className='side_container' fluid>
       <Header as='h2'>Les gestes barrières à adopter</Header>
-      <p>
+      <p >
       En hiver, les infections virales gâchent la vie des adultes et des enfants. 
       Des gestes simples de prévention permettent d’en réduire la transmission.
       </p>
       <ul>
-          <li>
+          <li data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
             <Image wrapped size='medium' src={c1} />
             <Rating maxRating={5} defaultRating={4} clearable />
             <br/>
             Lavez-vous très régulièrement les mains
             
           </li>
-          <li>
+          <li data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
             <Image wrapped size='medium' src={c2} /><Rating maxRating={5} defaultRating={5} clearable /><br/>
             Utilisez un mouchoir à usage unique et jetez-le
           </li>
-          <li>
+          <li data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
             <Image wrapped size='medium' src={c3} /><Rating maxRating={5} defaultRating={3} clearable /><br/>
             Toussez ou éternuez dans votre coude ou dans un mouchoir
           </li>
-          <li>
+          <li data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
             <Image wrapped size='medium' src={c4} /><Rating maxRating={5} defaultRating={4} clearable /><br/>
             Saluez sans se serrer la main, évitez les embrassades
           </li>
