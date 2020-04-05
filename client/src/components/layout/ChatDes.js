@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Comment, Form, Header } from 'semantic-ui-react'
 
+import avatar from './avatar.jpg';
 const ChatDes = () => (
   <Comment.Group>
     <Header as='h3' dividing>
@@ -8,7 +9,7 @@ const ChatDes = () => (
     </Header>
 
     <Comment>
-      <Comment.Avatar src='/images/avatar/small/matt.jpg' />
+      <Comment.Avatar src={avatar} />
       <Comment.Content>
         <Comment.Author as='a'>Matt</Comment.Author>
         <Comment.Metadata>
@@ -22,7 +23,7 @@ const ChatDes = () => (
     </Comment>
 
     <Comment>
-      <Comment.Avatar src='/images/avatar/small/elliot.jpg' />
+      <Comment.Avatar src={avatar} />
       <Comment.Content>
         <Comment.Author as='a'>Elliot Fu</Comment.Author>
         <Comment.Metadata>
@@ -37,7 +38,7 @@ const ChatDes = () => (
       </Comment.Content>
       <Comment.Group>
         <Comment>
-          <Comment.Avatar src='/images/avatar/small/jenny.jpg' />
+          <Comment.Avatar src={avatar} />
           <Comment.Content>
             <Comment.Author as='a'>Jenny Hess</Comment.Author>
             <Comment.Metadata>
@@ -53,7 +54,7 @@ const ChatDes = () => (
     </Comment>
 
     <Comment>
-      <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+      <Comment.Avatar src={avatar} />
       <Comment.Content>
         <Comment.Author as='a'>Joe Henderson</Comment.Author>
         <Comment.Metadata>

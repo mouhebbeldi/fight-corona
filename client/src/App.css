@@ -49,6 +49,7 @@ iframe{
 }
 .center{
     text-align: center !important;
+    padding: auto;
 
 }
 .sixteen{
