@@ -2,7 +2,14 @@ import React,{useState,useContext,useEffect} from 'react'
 import AlertContext from '../../context/alert/AlertContext';
 import AuthContext from '../../context/auth/authContext';
 import NavBar from '../layout/NavBar';
+
+import { Message } from 'semantic-ui-react'
+
+
 const  Register = props =>{
+    const items = [
+      'Basez le temps que vous passez sur votre Page sur vos objectifs et circonstances uniques. Si vous n\'avez pas beaucoup de ressources ou beaucoup de temps pour gérer votre page, nous vous recommandons d\'essayer de publier 1 à 2 fois par semaine et d\'effectuer des vérifications régulières pour vous assurer que votre page est à jour.',
+    ]
     
     const alertContext = useContext(AlertContext);
     const authContext = useContext(AuthContext);
@@ -48,9 +55,13 @@ const  Register = props =>{
         }
     }
     return (
-        <div className=''>
+        <div className='register'>
             {/* <NavBar/> */}
-        <h1>Register </h1>
+            <Message>
+                <Message.Header>Avant de créer un compte</Message.Header>
+                <Message.List items={items} />
+            </Message>
+        <h1 className='center'>Register Free-Corona</h1>
         <form className="ui form" onSubmit={onSubmit}>
             <div className="field">
                 <label>Name</label>
@@ -93,7 +104,7 @@ const  Register = props =>{
                     onChange={onChange}
                 />
             </div>
-            <input className="ui button" value='Register' type="submit"/>
+            <input className="ui button blue" value='Register' type="submit"/>
             <input className="ui button red" value='Clear' type="reset"/>
         </form>
         </div>

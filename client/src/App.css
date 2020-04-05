@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
 *{
     box-sizing: border-box;
- 
+    background-color: #d4d2ed;
 }
 
 h2{
     font-family: 'Changa', sans-serif;
     font-size: 30px;
-
+    
 }
 .item{
     font-family: 'Changa', sans-serif;
@@ -16,7 +16,9 @@ h2{
     margin-top: 30px;
     width: 100%;
 }
-
+.register {
+    margin-top: 60px;
+}
 
 .container{
     position: relative;

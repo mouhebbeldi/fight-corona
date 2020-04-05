@@ -104,7 +104,7 @@ const items = [
                 />
             </div>
           
-            <input className="ui button" value='Register' type="submit"/>
+            <input className="ui button" value='Send Prob' type="submit"/>
             <input className="ui button red" value='Clear' type="reset"/>
         </form>
 

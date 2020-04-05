@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Container, Header,Rating } from 'semantic-ui-react'
-import {  Image, Modal } from 'semantic-ui-react'
+import {  Image, Modal ,Icon, Statistic,Button} from 'semantic-ui-react';
+
 import corona1 from './corona1.png';
 import c1 from './c1.png';
 import c2 from './c2.png';
@@ -9,7 +10,6 @@ import c4 from './c4.png';
 import c5 from './c5.png';
 import ChatDes from './ChatDes'
 import AOS from 'aos';
-import { Button, Icon } from 'semantic-ui-react'
 
 const News = () => {
     
@@ -18,7 +18,10 @@ const News = () => {
         <Fragment>
     <Container fluid>
       <Header as='h2'>informations CORONAVIRUS</Header>
-      <p  >
+      <p data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500"  >
       Le 27 mars 2020, le Premier ministre a annoncé le renouvellement du confinement 
       pour deux semaines supplémentaires, soit jusqu’au mercredi 15 avril.
        Les mêmes règles que celles actuellement en vigueur continueront à s’appliquer. 
@@ -30,18 +33,27 @@ const News = () => {
       <Image wrapped size='medium' src={corona1} />
       <Modal.Description>
         
-        <p data-aos="zoom-in-left">
+        <p data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
         Le 27 mars 2020, le Premier ministre a annoncé le renouvellement du confinement pour deux semaines supplémentaires, soit jusqu’au mercredi 15 avril. Les mêmes règles que celles actuellement en vigueur continueront à s’appliquer. Cette période de confinement pourra être prolongée si la situation sanitaire l’exige.
 
         En application de l’état d’urgence sanitaire, les déplacements sont interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour :
     <ul>
-    <li data-aos="zoom-in-left">
+    <li data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
     Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle,
      lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous
       forme de télétravail ou déplacements professionnels ne pouvant être différés.
 
     </li>
-    <li data-aos="zoom-in-left">
+    <li ddata-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="700">
         Déplacements pour effectuer des achats de fournitures nécessaires
          à l’activité professionnelle et des achats de première nécessité, 
          y compris les acquisitions à titre gratuit (distribution de denrées alimentaires…) 
@@ -62,7 +74,10 @@ const News = () => {
     </Container>
     <Container className='side_container' fluid>
       <Header as='h2'>Les gestes barrières à adopter</Header>
-      <p >
+      <p data-aos="fade-right"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500" >
       En hiver, les infections virales gâchent la vie des adultes et des enfants. 
       Des gestes simples de prévention permettent d’en réduire la transmission.
       </p>
