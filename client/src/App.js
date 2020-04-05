@@ -33,7 +33,7 @@ const App=()=> {
               </Switch>
             </div>
         </Router>
-        {/* <Footer/> */}
+        <Footer/>
         </ProblemState>
       </AlertState>
    </AuthState>

@@ -60,6 +60,19 @@ iframe{
     font-size: 70px;
     color: rgb(200, 161, 88);
 }
+
+.center2{
+    position: relative;
+    top: 80%;
+    text-align: center !important;
+    padding: auto;
+    font-size: 40px;
+}
+
+.center-normal{
+    text-align: center !important;
+
+}
 .center{
     text-align: center !important;
     padding: auto;
@@ -81,4 +94,19 @@ iframe{
     margin-bottom: 30px;
     padding: 20px;
     background-color:rgb(255, 250, 242) !important;
+}
+
+.footer-area{
+    width: 100%;
+    height: 60%;
+    position: relative;
+
+    background-color:rgb(245, 158, 238);
+    margin-top: 10vh;
+}
+.me{
+    width: 100px;
+    height: 110px;
+    border-radius: 50%;
+
 }

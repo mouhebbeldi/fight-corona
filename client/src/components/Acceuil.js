@@ -1,5 +1,7 @@
 import React, { useContext,useEffect } from 'react';
-import { Feed,Header } from 'semantic-ui-react';
+import { Feed } from 'semantic-ui-react';
+import { Container, Header,Rating } from 'semantic-ui-react'
+import {  Image, Modal ,Icon, Statistic,Button} from 'semantic-ui-react';
 import avatar2 from './layout/avatar2.jpg';
 import News from './layout/News';
 import AuthContext from '../context/auth/authContext';
@@ -43,10 +45,35 @@ const Acceuil = () => {
 
     </div>
         <div className="nine wide column">
-        <Header data-aos="fade-right"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500" size='large'>Numéros d’urgence et d’écoute :190 </Header>
+        <Header data-aos="fade-right"size='meduim'>Numéros d’urgence et d’écoute :SAMU 190 </Header>
+     <Header data-aos="fade-right" size='meduim'>Protection civile Tunis : 198</Header>
+    <Header data-aos="fade-right" size='meduim'>Agent de permanence du consulat : 58 440 232</Header>
+    <Header data-aos="fade-right" size='meduim'>SOS Médecins : 71 744 215</Header>
+    <Header data-aos="fade-right" size='meduim'>SOS Ambulances : 71 725 555 ou 71 599 900</Header>
+    <Modal trigger={<Button>Find More</Button>} centered={false}>
+    <Modal.Header>Numéros d’urgence</Modal.Header>
+    <Modal.Content image>
+      <Modal.Description>
+        
+        <p data-aos="fade-up">
+              Urgence Le Secours : 71 351 500
+          <ul>
+            <strong>
+            <li data-aos="zoom-in-down">Clinique El Manar : 71 885 000 ; Fax : 71 884 100 </li>
+            <li data-aos="zoom-in-down">Polyclinique La Marsa : 71 749 000 ; Fax : 71 728 233</li>
+            <li data-aos="zoom-in-down"> Clinique Saint Augustin : 71 783 033 ; Fax : 71 792 708</li>
+            <li data-aos="zoom-in-down"> Ambulances médicalisées : 71 780 000 ou 71 781 000</li>
+            <li data-aos="zoom-in-down">Centre Anti-poisons : 71 335 500</li>
+            <li data-aos="zoom-in-down">Centre Anti-poisons : 71 335 500</li>
+            </strong><br/>
+            <p>Dernière modification : 18/04/2018</p>
+            Source <a href="https://tunis.consulfrance.org/En-cas-d-urgence">Clique ici</a>
+          </ul>
+        </p>
+       
+      </Modal.Description>
+    </Modal.Content>
+  </Modal>
      <Header size='large'>J’habite à l’étranger, qui appeler ? </Header> 
         <p data-aos="fade-right"
      data-aos-anchor="#example-anchor"
