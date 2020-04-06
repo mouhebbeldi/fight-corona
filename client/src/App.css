@@ -19,6 +19,11 @@ h2{
     margin-top: 30px;
     width: 100%;
 }
+.map{
+    margin-top: 30px;
+    width: 50%;
+    height: 280px;
+}
 .register {
     margin-top: 60px;
 }
@@ -59,9 +64,10 @@ iframe{
     width:100%;
     height: 320px;
 }
+
 .free_corona{
-    font-size: 70px;
-    color: rgb(200, 161, 88);
+    font-size: 60px;
+    color: black;
 }
 
 .center2{
@@ -184,3 +190,16 @@ a{
   .article-date{
       color: rgb(255, 146, 250);
   }
+
+
+   .colorr{
+      width: 30px !important;
+      height: 20px !important;
+      border: 1px solid black;
+  }
+
+  .color1{background-color: #fceed3;}
+  .color2{background-color: #f2a88d;}
+  .color3{background-color: #e36654;}
+  .color4{background-color: #e5354b;}
+  .color5{background-color: #87353f;}

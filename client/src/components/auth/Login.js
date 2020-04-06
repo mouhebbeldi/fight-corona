@@ -57,7 +57,7 @@ return (
               onChange={onChange}
             />
           </div>
-      <input className="ui green button" value='Login' type="submit"/>
+      <input className="ui pink button" value='Login' type="submit"/>
         </div>
       </div>
 </form>     
