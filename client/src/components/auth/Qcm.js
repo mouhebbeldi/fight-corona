@@ -242,6 +242,27 @@ Avez-vous eu un contact étroit avec une situation confirmée?</label>
                 </Form.Group>
             </div>
             
+
+            <div className="field" >
+                <label ><Icon disabled name='question circle outline' />Souffrez-vous d'une maladie pulmonaire chronique?</label>
+                <Form.Group inline>
+                <input 
+                    type="radio" 
+                    name="nine" 
+                    checked
+                    value="option1"
+                    placeholder="Name" 
+                    onChange={onChange}
+                />Oui
+                <br/><input 
+                    type="radio" 
+                    name="nine" 
+                    value="option2"
+                    placeholder="Name" 
+                    onChange={onChange}
+                />Non
+                </Form.Group>
+            </div>
             
            
             {/* <input className="ui button pink" value='Resultat' onClick={showResult} type="button" /> */}
