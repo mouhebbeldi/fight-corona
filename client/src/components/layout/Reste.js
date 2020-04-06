@@ -31,19 +31,16 @@ const  Reste =()=> {
             return (
                 <table className='ui celled striped table'>
                   <tr>
-                  <td className='tunisia'>
+                  <td colspan='3' className='tunisia'>
                      <i className={`${cases.CountryCode.toLowerCase()} flag`}></i>{cases.Country } 
                   </td >
                   </tr>
                   <tr>
                       <td > Confirmés :{ cases.TotalConfirmed}</td >
-                  </tr>
-                  <tr>
                       <td>Morts :{cases.TotalDeaths}</td>
+                      <td>Rétablis :{cases.TotalRecovered}</td>
                   </tr>
-                  <tr>
-                      <td>rétablis :{cases.TotalRecovered}</td>
-                  </tr>
+               
               </table>
               
               

@@ -108,29 +108,30 @@ const Acceuil = () => {
      data-aos-duration="800" >Un numéro vert répond à vos questions sur le Coronavirus COVID-19 en permanence, 24h/24 et 7j/7 : 0 800 130 000.</p>
         
         <div>
-          <h2 className='margin-top'>Cas covid19 autour du monde</h2>
+          <h2 className='margin-top'>Cas covid19 autour du monde </h2><h3>"Les pays critiques"</h3>
           {
             dataCovid!==null ?
          ( dataCovid.map(cases => {
             return (
                pays.includes(cases.Country)  ? (
                 <table className='ui celled striped table'>
-                  <tr>
-                  <td className={pays.includes(cases.Country)
+                  <tr >
+                  <td colspan='3' className={pays.includes(cases.Country)
                   ?
                    'tunisia' : 'sceen768px'}>
                      <i className={`${cases.CountryCode.toLowerCase()} flag`}></i>{cases.Country } 
                   </td >
+
                   </tr>
                   <tr>
-                      <td > Confirmés :{ cases.TotalConfirmed}</td >
-                  </tr>
-                  <tr>
+                  <td > Confirmés :{ cases.TotalConfirmed}</td >
                       <td>Morts :{cases.TotalDeaths}</td>
+                      <td>Rétablis :{cases.TotalRecovered}</td>
+                  </tr>
+                  {/* <tr>
                   </tr>
                   <tr>
-                      <td>rétablis :{cases.TotalRecovered}</td>
-                  </tr>
+                  </tr> */}
               </table>
               ) : null
             )

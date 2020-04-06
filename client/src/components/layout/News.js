@@ -3,14 +3,13 @@ import { Container, Header,Rating ,Segment,Responsive} from 'semantic-ui-react'
 import {  Image, Modal ,Icon, Statistic,Button} from 'semantic-ui-react';
 import axios from 'axios'
 
+ 
 import corona1 from './corona1.png';
 import c1 from './c1.png';
 import c2 from './c2.png';
 import c3 from './c3.png';
 import c4 from './c4.png';
-import c5 from './c5.png';
 import ChatDes from './ChatDes'
-import AOS from 'aos';
 
 const News = () => {
  
@@ -19,7 +18,7 @@ const [news, setnews] = useState(null)
 useEffect(() => {
   axios
   .get('http://newsapi.org/v2/everything?domains=wsj.com&apiKey=6a4cb3dc157745e2b451f3b3a03b87bb')
-  .then(response => setnews(response.articles));
+  .then(response => setnews(response.data.articles));
  // eslint-disable-next-line
 }, []);
 
@@ -32,19 +31,24 @@ useEffect(() => {
             news!==null ?
          ( news.map(nouv => {
             return (
-                
+                String(nouv.title).length>=80  ?(
                 <table className='ui celled striped table'>
                   <tr>
                   <td>
-                   Title {nouv.title } 
+                   <strong>Titre du Article :</strong>  {nouv.title } 
                   </td >
                   </tr>
                   <tr>
-                      <td > Content :{ nouv.content}</td >
+                    
+                      <td >{ nouv.content} 
+                      <p className='article-date'><strong>publié à:</strong>{nouv.publishedAt.slice(0,nouv.publishedAt.length-10)}</p>
+                      <p className='article-source'>vous pouvez lire plus <a href={nouv.url}>ici</a></p>
+
+                      </td >
                   </tr>
                  
               </table>
-              
+                ) : null
             )
           }  )): 
           <Segment.Group className='margin-bottom'>

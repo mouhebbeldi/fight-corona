@@ -47,7 +47,7 @@ const  NavBar =(props)=> {
            <div className="menu">
            <Link className='item' to='/about'><i className=" edit icon" />Free-Corona</Link>
              <a className="item"><i className="settings icon" /> Account Setting</a>
-             <a className="item"><i className="globe icon" /> Choose Language</a>
+             <a className="item ui icon button" data-content="not availble yet"><i className="globe icon" /> Choose Language</a>
              <a className="item" onClick={onLogout}><i className="power off icon" /> Logouts</a>
            </div>
          </div>
@@ -78,7 +78,7 @@ const nonAuthLinks=(
             <div className="menu">
             <Link className='item' to='/about'><i className=" edit icon" /> About Free-Corona</Link>
 
-              <a className="item"><i className="globe icon" /> Choose Language</a>
+              <a className="item ui icon button" data-content="not availble yet"><i className="globe icon" /> Choose Language</a>
             </div>
           </div>
           <div className="right item">
