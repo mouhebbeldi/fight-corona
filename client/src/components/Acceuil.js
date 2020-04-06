@@ -1,7 +1,11 @@
 import React, { useContext,useEffect } from 'react';
 import { Feed } from 'semantic-ui-react';
+import {Scroll}  from 'react-scroll';
+
+
 import { Container, Header,Rating } from 'semantic-ui-react'
 import {  Image, Modal ,Icon, Statistic,Button} from 'semantic-ui-react';
+
 import avatar2 from './layout/avatar2.jpg';
 import News from './layout/News';
 import AuthContext from '../context/auth/authContext';
@@ -30,18 +34,25 @@ const Acceuil = () => {
     // eslint-disable-next-line
   }, [ ]);
 
- console.log(problem)
   
 
- 
+  // let scroll     = Scroll.animateScroll;
+
+ const scrollToTop = () =>{
+  Scroll.animateScroll.scrollToTop();
+  }
+
   return (
 
   <div>
     <div className="ui grid stackable">
+<Icon size='huge' onClick={scrollToTop} disabled name='arrow up' className='arrow-up'/>
     <div className="sixteen wide column">
-     <h2 className='free_corona' data-aos="flip-down" data-aos-duration="1200">Free-Corona</h2>
+     <h2 className='free_corona' >Free-Corona</h2>
     
-   
+
+
+
 
     </div>
         <div className="nine wide column">

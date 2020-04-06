@@ -18,10 +18,7 @@ const News = () => {
         <Fragment>
     <Container fluid>
       <Header as='h2'>informations CORONAVIRUS</Header>
-      <p data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500"  >
+      <p data-aos="fade-left"  >
       Le 27 mars 2020, le Premier ministre a annoncé le renouvellement du confinement 
       pour deux semaines supplémentaires, soit jusqu’au mercredi 15 avril.
        Les mêmes règles que celles actuellement en vigueur continueront à s’appliquer. 
@@ -33,27 +30,18 @@ const News = () => {
       <Image wrapped size='medium' src={corona1} />
       <Modal.Description>
         
-        <p data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+        <p data-aos="fade-left">
         Le 27 mars 2020, le Premier ministre a annoncé le renouvellement du confinement pour deux semaines supplémentaires, soit jusqu’au mercredi 15 avril. Les mêmes règles que celles actuellement en vigueur continueront à s’appliquer. Cette période de confinement pourra être prolongée si la situation sanitaire l’exige.
 
         En application de l’état d’urgence sanitaire, les déplacements sont interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour :
     <ul>
-    <li data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+    <li data-aos="fade-left">
     Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle,
      lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous
       forme de télétravail ou déplacements professionnels ne pouvant être différés.
 
     </li>
-    <li ddata-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="700">
+    <li data-aos="fade-left">
         Déplacements pour effectuer des achats de fournitures nécessaires
          à l’activité professionnelle et des achats de première nécessité, 
          y compris les acquisitions à titre gratuit (distribution de denrées alimentaires…) 
@@ -61,7 +49,7 @@ const News = () => {
           dans des établissements dont les activités demeurent autorisées.
 
     </li>
-    <li>
+    <li data-aos="fade-left">
     Consultations et soins ne pouvant être assurés à distance et ne pouvant être différés 
      ; soin des patients atteints d'une affection de longue durée.
     </li>
@@ -74,50 +62,31 @@ const News = () => {
     </Container>
     <Container className='side_container' fluid>
       <Header as='h2'>Les gestes barrières à adopter</Header>
-      <p data-aos="fade-right"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500" >
+      <p data-aos="flip-down" >
       En hiver, les infections virales gâchent la vie des adultes et des enfants. 
       Des gestes simples de prévention permettent d’en réduire la transmission.
       </p>
       <ul>
-          <li data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+          <li data-aos="flip-down">
             <Image wrapped size='medium' src={c1} />
             <Rating maxRating={5} defaultRating={4} clearable />
             <br/>
             Lavez-vous très régulièrement les mains
             
           </li>
-          <li data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+          <li data-aos="flip-down">
             <Image wrapped size='medium' src={c2} /><Rating maxRating={5} defaultRating={5} clearable /><br/>
             Utilisez un mouchoir à usage unique et jetez-le
           </li>
-          <li data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+          <li data-aos="flip-down">
             <Image wrapped size='medium' src={c3} /><Rating maxRating={5} defaultRating={3} clearable /><br/>
             Toussez ou éternuez dans votre coude ou dans un mouchoir
           </li>
-          <li data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500">
+          <li data-aos="flip-down">
             <Image wrapped size='medium' src={c4} /><Rating maxRating={5} defaultRating={4} clearable /><br/>
             Saluez sans se serrer la main, évitez les embrassades
           </li>
-          <li>
-            <Image wrapped size='medium' src={c5} /><Rating maxRating={5} defaultRating={2} clearable /><br/>
-            Pour tenir la maladie à distance, restez à plus d’un mètre de distance les uns des autres
-           
-          </li>
+         
       </ul>
    
     

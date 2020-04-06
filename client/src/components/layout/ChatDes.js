@@ -8,7 +8,8 @@ const ChatDes = () => (
       Comments
     </Header>
 
-    <Comment>
+    <Comment data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <Comment.Avatar src={avatar} />
       <Comment.Content>
         <Comment.Author as='a'>Matt</Comment.Author>
@@ -22,7 +23,8 @@ const ChatDes = () => (
       </Comment.Content>
     </Comment>
 
-    <Comment>
+    <Comment data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <Comment.Avatar src={avatar} />
       <Comment.Content>
         <Comment.Author as='a'>Elliot Fu</Comment.Author>
@@ -37,7 +39,8 @@ const ChatDes = () => (
         </Comment.Actions>
       </Comment.Content>
       <Comment.Group>
-        <Comment>
+        <Comment data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
           <Comment.Avatar src={avatar} />
           <Comment.Content>
             <Comment.Author as='a'>Jenny Hess</Comment.Author>
@@ -53,7 +56,8 @@ const ChatDes = () => (
       </Comment.Group>
     </Comment>
 
-    <Comment>
+    <Comment data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
       <Comment.Avatar src={avatar} />
       <Comment.Content>
         <Comment.Author as='a'>Joe Henderson</Comment.Author>

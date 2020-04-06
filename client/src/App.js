@@ -1,4 +1,5 @@
 import React,{Fragment} from 'react';
+
 import './App.css';
 import {BrowserRouter as Router , Route , Switch } from 'react-router-dom';
 import Alerts from './components/layout/Alerts'
@@ -23,7 +24,8 @@ const App=()=> {
         <Router>
             <div className='container' >
               <NavBar/> 
-
+           
+              
               <Alerts/>
               <Switch>
                 <Route exact path='/' component={Acceuil}/>
