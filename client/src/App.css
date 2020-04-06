@@ -150,7 +150,7 @@ input[type="radio"]{
     cursor: pointer;
 }
 a{
-    background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+    /* background: linear-gradient(to bottom, pink 0%, pink 100%); */
       background-position: 0 100%;
       background-repeat: repeat-x;
       background-size: 3px 3px;
@@ -170,4 +170,14 @@ a{
 
   p{
       font-size: 18px;
+  }
+
+  .tunisia{
+      color: white;
+      background-color: rgb(235, 149, 149);
+  }
+  @media (max-width: 768px) {
+    .sceen768px {
+        color: black !important;
+    }
   }

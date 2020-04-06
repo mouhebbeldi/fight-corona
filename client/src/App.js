@@ -14,6 +14,7 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Qcm from './components/auth/Qcm';
 import About from './components/auth/About';
+import Reste from './components/layout/Reste';
 if (localStorage.token) setAuthToken(localStorage.token);
 const App=()=> {
 
@@ -34,6 +35,7 @@ const App=()=> {
                 <Route  path='/register' component={Register}/>
                 <Route  path='/qcm' component={Qcm}/>
                 <Route  path='/about' component={About}/>
+                <Route  path='/reste' component={Reste}/>
               </Switch>
             </div>
         </Router>

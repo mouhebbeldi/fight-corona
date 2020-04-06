@@ -12,11 +12,11 @@ const ChatDes = () => (
      data-aos-anchor-placement="center-bottom">
       <Comment.Avatar src={avatar} />
       <Comment.Content>
-        <Comment.Author as='a'>Matt</Comment.Author>
+        <Comment.Author as='a'>Mohammed</Comment.Author>
         <Comment.Metadata>
-          <div>Today at 5:42PM</div>
+          <div>Aujourd'hui at 5:42pm</div>
         </Comment.Metadata>
-        <Comment.Text>How artistic!</Comment.Text>
+        <Comment.Text>super bravo #tun</Comment.Text>
         <Comment.Actions>
           <Comment.Action>Reply</Comment.Action>
         </Comment.Actions>
@@ -27,12 +27,12 @@ const ChatDes = () => (
      data-aos-anchor-placement="center-bottom">
       <Comment.Avatar src={avatar} />
       <Comment.Content>
-        <Comment.Author as='a'>Elliot Fu</Comment.Author>
+        <Comment.Author as='a'>Sami Zitouni</Comment.Author>
         <Comment.Metadata>
-          <div>Yesterday at 12:30AM</div>
+          <div>Aujourd'hui at 12:30am</div>
         </Comment.Metadata>
         <Comment.Text>
-          <p>This has been very useful for my research. Thanks as well!</p>
+          <p>Cela a été très utile pour mes recherches. Merci aussi!</p>
         </Comment.Text>
         <Comment.Actions>
           <Comment.Action>Reply</Comment.Action>
@@ -43,11 +43,11 @@ const ChatDes = () => (
      data-aos-anchor-placement="center-bottom">
           <Comment.Avatar src={avatar} />
           <Comment.Content>
-            <Comment.Author as='a'>Jenny Hess</Comment.Author>
+            <Comment.Author as='a'>Karim XD</Comment.Author>
             <Comment.Metadata>
-              <div>Just now</div>
+              <div>Maintenant</div>
             </Comment.Metadata>
-            <Comment.Text>Elliot you are always so right </Comment.Text>
+            <Comment.Text>Sami tu as toujours si raison</Comment.Text>
             <Comment.Actions>
               <Comment.Action>Reply</Comment.Action>
             </Comment.Actions>
@@ -60,11 +60,11 @@ const ChatDes = () => (
      data-aos-anchor-placement="center-bottom">
       <Comment.Avatar src={avatar} />
       <Comment.Content>
-        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+        <Comment.Author as='a'>Montassar Madeni</Comment.Author>
         <Comment.Metadata>
-          <div>5 days ago</div>
+          <div>il y a 5 jours</div>
         </Comment.Metadata>
-        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+        <Comment.Text>Mec, c'est génial. Merci beaucoup</Comment.Text>
         <Comment.Actions>
           <Comment.Action>Reply</Comment.Action>
         </Comment.Actions>
