@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import Login from '../auth/Login';
 import avatar from './avatar.jpg';
+import About from '../auth/About';
 const  NavBar =(props)=> {
   const authContext = useContext(AuthContext);
   const {isAuthenticated , logout, user}= authContext;
@@ -44,7 +45,7 @@ const  NavBar =(props)=> {
            ShowList
            <i className="dropdown icon" />
            <div className="menu">
-             <a className="item"><i className="edit icon" /> About US</a>
+           <Link className='item' to='/about'><i className=" edit icon" />Free-Corona</Link>
              <a className="item"><i className="settings icon" /> Account Setting</a>
              <a className="item"><i className="globe icon" /> Choose Language</a>
              <a className="item" onClick={onLogout}><i className="power off icon" /> Logouts</a>
@@ -75,7 +76,8 @@ const nonAuthLinks=(
             ShowList
             <i className="dropdown icon" />
             <div className="menu">
-              <a className="item"><i className="edit icon" /> About US</a>
+            <Link className='item' to='/about'><i className=" edit icon" /> About Free-Corona</Link>
+
               <a className="item"><i className="globe icon" /> Choose Language</a>
             </div>
           </div>

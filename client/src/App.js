@@ -13,6 +13,7 @@ import setAuthToken from './utils/setAuthToken';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Qcm from './components/auth/Qcm';
+import About from './components/auth/About';
 if (localStorage.token) setAuthToken(localStorage.token);
 const App=()=> {
 
@@ -32,6 +33,7 @@ const App=()=> {
                 <Route  path='/problems' component={Problems}/>
                 <Route  path='/register' component={Register}/>
                 <Route  path='/qcm' component={Qcm}/>
+                <Route  path='/about' component={About}/>
               </Switch>
             </div>
         </Router>

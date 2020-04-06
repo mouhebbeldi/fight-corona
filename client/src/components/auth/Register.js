@@ -9,7 +9,7 @@ import { Message } from 'semantic-ui-react'
 const  Register = props =>{
     const items = [
       'Basez le temps que vous passez sur votre Page sur vos objectifs et circonstances uniques. Si vous n\'avez pas beaucoup de ressources ou beaucoup de temps pour gérer votre page, nous vous recommandons d\'essayer de publier 1 à 2 fois par semaine et d\'effectuer des vérifications régulières pour vous assurer que votre page est à jour.',
-    ]
+    ];
     
     const alertContext = useContext(AlertContext);
     const authContext = useContext(AuthContext);
