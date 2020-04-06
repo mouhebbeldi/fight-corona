@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
-import { Container, Header,Rating } from 'semantic-ui-react'
+import React, { Fragment,useState,useEffect } from 'react'
+import { Container, Header,Rating ,Segment,Responsive} from 'semantic-ui-react'
 import {  Image, Modal ,Icon, Statistic,Button} from 'semantic-ui-react';
+import axios from 'axios'
 
 import corona1 from './corona1.png';
 import c1 from './c1.png';
@@ -12,10 +13,49 @@ import ChatDes from './ChatDes'
 import AOS from 'aos';
 
 const News = () => {
+ 
+const [news, setnews] = useState(null)
+
+useEffect(() => {
+  axios
+  .get('http://newsapi.org/v2/everything?domains=wsj.com&apiKey=6a4cb3dc157745e2b451f3b3a03b87bb')
+  .then(response => setnews(response.articles));
+ // eslint-disable-next-line
+}, []);
+
     
-    AOS.init();
     return(
         <Fragment>
+         <div>
+          <h3 className='margin-top'>l'Actualité dans le monde</h3>
+          {
+            news!==null ?
+         ( news.map(nouv => {
+            return (
+                
+                <table className='ui celled striped table'>
+                  <tr>
+                  <td>
+                   Title {nouv.title } 
+                  </td >
+                  </tr>
+                  <tr>
+                      <td > Content :{ nouv.content}</td >
+                  </tr>
+                 
+              </table>
+              
+            )
+          }  )): 
+          <Segment.Group className='margin-bottom'>
+          <Responsive as={Segment} minWidth={768}>
+              Désolés les ressources interrompues 
+          </Responsive>
+      </Segment.Group>
+
+          }
+
+        </div>
     <Container fluid>
       <Header as='h2'>informations CORONAVIRUS</Header>
       <p data-aos="fade-left"  >

@@ -173,7 +173,7 @@ a{
   }
 
   .tunisia{
-      color: white;
+      color: black;
       background-color: rgb(235, 149, 149);
   }
   @media (max-width: 768px) {
